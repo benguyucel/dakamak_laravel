@@ -1,0 +1,666 @@
+/* Hero Banner Section - Start
+================================================== */
+
+.hero_banner_section {
+	.container {
+		max-width: 1480px;
+	}
+}
+
+// Hero Banner Style 1 - Start
+.hero_banner_section.style_1 {
+	display: flex;
+	padding: 120px 0;
+	min-height: 980px;
+	margin-bottom: 60px;
+	align-items: center;
+	background: linear-gradient(180deg, rgba(10, 51, 194, 0.06) 0%, transparent 100%);
+	@media #{$xxl,$xl} {
+		min-height: 900px;
+	}
+	@media #{$lg} {
+		min-height: 850px;
+	}
+
+	.section_heading {
+		.heading_title {
+			font-size: 80px;
+			line-height: 1.2;
+			margin-bottom: 25px;
+			@media #{$xxl,$xl,$md} {
+				font-size: 70px;
+			}
+			@media #{$lg} {
+				font-size: 60px;
+			}
+			@media #{$xs,$sm} {
+				font-size: 40px;
+			}
+			@media #{$xxs} {
+				font-size: 34px;
+			}
+			span {
+				position: relative;
+			}
+			.focus_text {
+				position: absolute;
+				bottom: 5px;
+				left: 0px;
+				z-index: -1;
+				-webkit-animation: section-animation 3s infinite;
+				animation: section-animation 3s infinite;
+			}
+		}
+	}
+
+	.hero_banner_image {
+		max-width: 687px;
+		margin: auto -87px auto auto;
+		@media #{$xs,$sm,$md} {
+			max-width: 100%;
+			margin: auto  auto 30px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	.shape_1 {
+		top: 0;
+		left: 50%;
+		bottom: 0;
+		width: 50%;
+		border-radius: 0 0 0 120px;
+		background-image: linear-gradient(0deg, #D2DCFB 0%, rgba(210, 220, 251, 0) 100%);
+	}
+	.shape_2 {
+		left: -180px;
+		bottom: -50px;
+		width: 253px;
+		opacity: 0.5;
+		height: 143px;
+		border-radius: 50%;
+		filter: blur(175px);
+		transform: rotate(29.58deg);
+		background-color: $color_warning;
+	}
+	.shape_3 {
+		top: 0;
+		left: 0;
+		width: 342px;
+		height: 194px;
+		border-radius: 50%;
+		filter: blur(175px);
+		background-color: $color_warning;
+	}
+	.shape_4 {
+		top: -100px;
+		right: -230px;
+		max-width: 289px;
+	}
+	.shape_5 {
+		top: -26px;
+		right: 76px;
+		max-width: 142px;
+	}
+	.shape_6 {
+		bottom: -12px;
+		right: -195px;
+		max-width: 842px;
+	}
+}
+// Hero Banner Style 1 - End
+
+// Hero Banner Style 2 - Start
+.hero_banner_section.style_2 {
+	text-align: center;
+	padding: 188px 0 88px;
+	background: linear-gradient(0deg, rgba(255, 127, 80, 0.1) 0%, rgba(255, 127, 80, 0) 100%);
+	@media #{$xs,$sm} {
+		padding: 158px 0 58px;
+	}
+	.cd-headline {
+		font-size: 67px;
+		margin-bottom: 41px;
+		line-height: 1.3;
+		@media #{$lg,$md} {
+			font-size: 60px;
+		}
+		@media #{$sm} {
+			font-size: 50px;
+		}
+		@media #{$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		.cd-words-wrapper {
+			color: $color_danger;
+		}
+	}
+
+	.man_image {
+		margin: auto;
+		max-width: 500px;
+		animation: upDown 1s infinite alternate;
+	}
+	.shape_1 {
+		top: 50%;
+		left: 50%;
+		margin-left: -30px;
+		@include transform(translate(-50%, -50%));
+	}
+	.shape_2 {
+		top: 254px;
+		left: -16px;
+	}
+	.shape_3 {
+		right: -50px;
+		bottom: 160px;
+	}
+	.shape_4 {
+		top: 260px;
+		right: -20px;
+	}
+
+	.shape_5 {
+		top: 208px;
+		left: -76px;
+	}
+	.shape_6 {
+		left: 50%;
+		top: 140px;
+		max-width: 263px;
+		transform: translateX(-50%);
+		img {
+			opacity: 0.5;
+			filter: blur(200px);
+		}
+	}
+	.shape_7 {
+		top: -100px;
+		right: -120px;
+		max-width: 432px;
+		img {
+			opacity: 0.4;
+			filter: blur(300px);
+		}
+	}
+
+	.iconbox_support {
+		left: 90px;
+		bottom: 118px;
+		position: absolute;
+	}
+	.iconbox_award {
+		top: 45%;
+		right: 100px;
+		position: absolute;
+		@media #{$xs,$sm} {
+			display:none;
+		}
+	}
+	.iconbox_item {
+		display: flex;
+		text-align: left;
+		align-items: center;
+		padding: 10px 15px 10px 10px;
+		background-color: $color_white;
+		@media #{$xs,$sm} {
+			display:none;
+		}
+		&:before {
+			display: none;
+		}
+
+		.item_icon {
+			margin: 0 10px 0 0;
+		}
+
+		.item_title {
+			margin: 0;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 27px;
+			color: $color_body;
+			font-family: $font_body;
+		}
+		p {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 22px;
+			color: $color_dark;
+			font-family: $font_heading;
+		}
+	}
+}
+// Hero Banner Style 2 - End
+
+// Hero Banner Style 3 - Start
+.hero_banner_section.style_3 {
+	padding: 146px 0 80px;
+	@media #{$xxl,$xl,$lg} {
+		padding: 100px 0 50px;
+	}
+	@media #{$xs,$sm} {
+		padding: 135px 0 30px;
+	}
+	.hero_banner_heading {
+		font-size: 90px;
+		line-height: 1.08;
+		margin-bottom: 70px;
+		color: $color_white;
+		position: relative;
+		z-index: 55;
+		@media #{$xxl} {
+			font-size: 80px;
+		}
+		@media #{$xl} {
+			font-size: 75px;
+		}
+		@media #{$lg} {
+			font-size: 65px;
+		}
+		@media #{$md} {
+			font-size: 68px;
+		}
+		@media #{$xs,$sm} {
+			font-size: 50px;
+		}
+		@media #{$xxs} {
+			font-size: 40px;
+		}
+		span {
+			position: relative;
+			z-index: 5;
+			&::before {
+				position: absolute;
+				content: "";
+				bottom: 5px;
+				left: 0;
+				background: url(../images/shapes/shape_line_2.svg);
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: bottom;
+				-webkit-animation: section-animation 3s infinite;
+				animation: section-animation 3s infinite;
+				z-index: -1;
+			}
+		}
+	}
+	.man_image {
+		@media #{$md} {
+			max-width: 0 15%;
+		}
+		img {
+			animation: upDown 1s infinite alternate;
+			width: 100%;			
+		}
+	}
+	.shape_1 {
+		top: 50%;
+		left: 50%;
+		width: 670px;
+		@include transform(translate(-50%, -50%));
+		@media #{$xl} {
+			width: 600px;
+		}
+		@media #{$lg} {
+			width: 550px;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
+.hero_banner_image_3{
+	@media #{$md} {
+		margin: 0 15%;
+	}
+}
+// Hero Banner Style 3 - End
+
+// Hero Banner Style 4 - Start
+.banner_bg_4 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 42%;
+	height: 100%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: left;
+	@media #{$lg,$xl,$xxl} {
+		width: 50%;
+	}
+	@media #{$xs,$sm,$md} {
+		display: none;
+	}
+}
+.hero_banner_section.style_4 {
+	overflow: hidden;
+	padding: 292px 0 184px;
+	@media #{$md} {
+		padding: 250px 0 184px;
+	}
+	@media #{$xs,$sm} {
+		padding: 190px 0 184px;
+	}
+	.hero_banner_heading {
+		font-size: 80px;
+		margin-bottom: 30px;
+		line-height: 1.12;
+		@media #{$xl,$xxl} {
+			font-size: 65px;
+		}
+		@media #{$lg} {
+			font-size: 50px;
+		}
+		@media #{$md} {
+			font-size: 55px;
+		}
+		@media #{$xs,$sm} {
+			font-size: 46px;
+		}
+		@media #{$xs} {
+			font-size: 32px;
+		}
+		.focus_text {
+			color: $color_primary;
+		}
+	}
+	p {
+		font-size: 17px;
+		line-height: 27px;
+		margin-bottom: 50px;
+	}
+	.subscribe_form {
+		border: none;
+		input {
+			background-color: rgba(25, 84, 237, 0.1);
+		}
+	}
+
+	.rocket_image {
+		max-width: 280px;
+		margin: auto -48px auto auto;
+		@media #{$xl,$xxl} {
+			margin: auto 0px auto auto;
+		}
+		@media #{$xs,$sm,$md} {
+			margin: auto;
+		}
+		img {
+			animation: upDown 1s infinite alternate;
+		}
+	}
+	.shape_1 {
+		top: 17px;
+		right: -74px;
+		opacity: 0.5;
+		max-width: 336px;
+		filter: blur(200px);
+		@media #{$xs,$sm,$md} {
+			right: auto;
+			transform: translateX(-50%);
+			left: 50%;
+		}
+	}
+	.shape_2 {
+		top: -96px;
+		right: -56px;
+	}
+	.shape_3 {
+		right: 300px;
+		bottom: -86px;
+	}
+	.shape_4 {
+		top: -20px;
+		left: 150px;
+		@media #{$xl,$xxl} {
+			left: 30px;
+		}
+		@media #{$lg} {
+			left: 0px;
+		}
+		@media #{$xs,$sm,$md} {
+			display: none;
+		}
+		>li {
+			&:nth-child(1) {
+				padding-left: 75px;
+			}
+			&:nth-child(2) {
+				padding-left: 30px;
+			}
+		}
+	}
+	.shape_5 {
+		right: -130px;
+		bottom: -130px;
+		max-width: 260px;
+	}
+	.shape_6 {
+		left: -40px;
+		bottom: -35px;
+	}
+}
+// Hero Banner Style 4 - End
+
+// Hero Banner Style 5 - Start
+.hero_banner_section.style_5 {
+	padding: 155px 0 0;
+	@media #{$xl,$xxl} {
+		padding: 115px 0 0;
+	}
+	.hero_banner_heading {
+		font-size: 80px;
+		font-weight: 800;
+		line-height: 1.12;
+		margin: -67px 0 50px;
+		@media #{$xl} {
+			font-size: 70px;
+		}
+		@media #{$lg,$md} {
+			font-size: 60px;
+		}
+		@media #{$sm} {
+			font-size: 50px;
+		}
+		@media #{$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		.focus_text {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 27px;
+			margin-bottom: 30px;
+			align-items: center;
+			border-radius: 50px;
+			display: inline-flex;
+			padding: 5px 5px 5px 15px;
+			border: 1px solid $color_border;
+			small {
+				padding: 0 10px;
+				margin-left: 10px;
+				border-radius: 50px;
+				background-color: $color_warning;
+			}
+		}
+	}
+	.hero_banner_image {
+		margin: 0 -147px -15px 0;
+		@media #{$xs,$sm,$md,$lg,$xl} {
+			margin: auto;
+		}
+	}
+	.analyse_image {
+		left: 50%;
+		z-index: 1;
+		bottom: 197px;
+		max-width: 234px;
+		border-radius: $radius_primary;
+	}
+	.color_shadow_1 {
+		bottom: 0;
+		right: 27px;
+		opacity: 0.5;
+		max-width: 830px;
+		filter: blur(200px);
+	}
+	.color_shadow_2 {
+		top: 0;
+		left: 0;
+		opacity: 0.3;
+		max-width: 300px;
+		filter: blur(200px);
+	}
+	.color_shadow_3 {
+		left: 25%;
+		top: -160px;
+		opacity: 0.3;
+		max-width: 425px;
+		filter: blur(200px);
+	}
+	.shape_1 {
+		top: 159px;
+		left: 52px;
+	}
+	.shape_2 {
+		top: 93px;
+		right: 20px;
+	}
+}
+// Hero Banner Style 5 - End
+
+// Hero Banner Style 6 - Start
+.hero_banner_section.style_6 {
+	overflow: hidden;
+	padding: 223px 0 120px;
+	background-image: linear-gradient(40.25deg, rgba(253, 210, 78, 0.15) 0%, rgba(253, 210, 78, 0) 63.9%);
+	@media #{$xxl,$xl} {
+		padding: 170px 0 120px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		padding: 150px 0 120px;
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(160.25deg, #FDD24E 0%, rgba(253, 210, 78, 0) 63.9%);
+		opacity: 0.15;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	.hero_banner_image {
+		max-width: 747px;
+		margin-left: -84px;
+		@media #{$xxl,$xl} {
+			max-width: 680px;
+			margin-left: 0px;
+		}
+		@media #{$xs,$sm,$md,$lg} {
+			margin-left: 0px;
+		}
+		img {
+			animation: upDown 1s infinite alternate;
+			width: 100%;
+		}
+	}
+	.hero_banner_heading {
+		font-size: 75px;
+		font-weight: 800;
+		line-height: 1.12;
+		margin-bottom: 55px;
+		padding-right: 100px;
+		@media #{$xxl,$xl} {
+			font-size: 65px;
+			padding-right: 0px;
+		}
+		@media #{$md} {
+			font-size: 60px;
+			padding-right: 0;
+		}
+		@media #{$sm,$lg} {
+			font-size: 55px;
+			padding-right: 0;
+		}
+		@media #{$xs} {
+			font-size: 46px;
+			padding-right: 0;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		.small_title {
+			display: block;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1;
+			margin-bottom: 29px;
+			text-transform: uppercase;
+		}
+		.focus_text {
+			position: relative;
+			z-index: 5;
+			display: inline-block;
+			&::after {
+				position: absolute;
+				content: "";
+				height: 100%;
+				width: 100%;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				background-repeat: no-repeat;
+				background-position: center bottom 15px;
+				background-image: linear-gradient(0deg, $color_warning 16px, transparent 0);
+				-webkit-animation: section-animation 3s infinite;
+				animation: section-animation 3s infinite;
+			}
+		}
+	}
+
+	.shape_1 {
+		left: -230px;
+		bottom: -150px;
+		max-width: 912px;
+		@media #{$xl} {
+			max-width: 865px;
+		}
+		@media #{$lg} {
+			max-width: 750px;
+		}
+	}
+	.shape_2 {
+		top: 100px;
+		right: -94px;
+		max-width: 153px;
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	.shape_3 {
+		top: 248px;
+		right: 202px;
+		max-width: 20px;
+	}
+	.shape_4 {
+		right: 23%;
+		bottom: 160px;
+		max-width: 16px;
+	}
+}
+// Hero Banner Style 6 - End
+
+/* Hero Banner Section - End
+================================================== */

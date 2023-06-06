@@ -1,0 +1,220 @@
+
+/* Template Header - Start
+================================================== */
+
+// Header Elements - Start
+
+// Header baricon
+.bar {
+    &-icon {
+        width: 30px;
+        height: 22px;
+        @include flexbox();
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        span {
+            width: 100%;
+            height: 2px;
+            background: $color_dark;
+            display: inline-block;
+            &:nth-child(2) {
+                margin-inline-start: 15px;
+                @include transition (.3s);
+            }
+            &:nth-child(3) {
+                margin-inline-start: 5px;
+                @include transition (.3s);
+            }
+        }
+        &:hover {
+            span {
+                &:nth-child(2) {
+                    margin-inline-start: 10px;
+                }
+                &:nth-child(3) {
+                    margin-inline-start: 0;
+                }
+            }
+        }
+		&.is-white {
+			span {
+				background: $color_white;
+			}
+		}
+    }
+}
+.site_header {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	position: absolute;
+	transition: $transition_fast;
+	@media #{$xs,$sm,$md} {
+		padding: 12px 0;
+	}
+	.container {
+		max-width: 1480px;
+	}
+	&.sticky {
+		position: fixed;
+		background-color: $color_white;
+		box-shadow: 0 2px 6px 0 rgba(16, 18, 19, 0.08);
+		-webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+		animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+		-webkit-box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.1);
+	}
+
+	.select_option {
+		align-items: center;
+		display: inline-flex;
+		@media #{$lg} {
+			display: none;
+		}
+		.icon_wrap {
+			margin: -5px 8px 0 0;
+		}
+	}
+
+	.btn {
+		padding: 0 25px;
+		span small {
+			padding: 13px 0;
+		}
+	}
+
+	.select_option {
+		.nice-select {
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			&:after {
+				color: $color_dark;
+			}
+			.list {
+				right: 0;
+				left: auto;
+			}
+			.current {
+				font-weight: 600;
+				color: $color_dark;
+			}
+		}
+	}
+}
+.sticky {
+	.main-menu {
+		ul {
+			& > li {
+				& > a {
+					padding: 27px 0;
+				}
+			}
+		}
+	}
+}
+// Header Elements - End
+
+// Header style
+.header_wrapper {
+	display: grid;
+	grid-template-columns: 25% auto 25%;
+	justify-content: space-between;
+	align-items: center;
+	@media #{$xs,$sm,$md} {
+		grid-template-columns: auto auto;
+	}
+	@media #{$xl} {
+		grid-template-columns: 18% auto 27%;
+	}
+	@media #{$lg} {
+		grid-template-columns: 20% auto 20%;
+	}
+}
+.header_right {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	justify-content: end;
+}
+
+
+// Header Buttons Group - Start
+.header_btns_group {
+	>li {
+		margin-left: 30px;
+		&:first-child {
+			display: none;
+		}
+	}
+}
+// Header Buttons Group - End
+
+// Header Style 2 - Start
+.site_header_2 {
+	border-bottom: 1px solid $color_border;
+	.select_option {
+		.nice-select {
+			&:focus {
+				border-color: $color_danger;
+			}
+
+			.list {
+				>li {
+					&:hover,
+					&.selected {
+						color: $color_danger;
+					}
+				}
+			}
+		}
+	}
+}
+// Header Style 2 - End
+
+// Header Style 3 - Start
+.site_header_3 {
+	transition: unset;
+	.select_option .nice-select .current,
+	.select_option .nice-select::after {
+		color: $color_white;
+	}
+	&.sticky {
+		backdrop-filter: blur(18px);
+		background-color: rgba(16, 18, 19, 0.7);
+		animation: .4s ease-in-out 0s normal none 1 running fadeInDown;
+	}
+}
+// Header Style 3 - End
+
+// Header Style 4 - Start
+.site_header_4 {
+	.content_box {
+		margin-top: 20px;
+		padding: 0px 20px;
+		border-radius: 120px;
+		transition: all .2s ease;
+		background-color: $color_white;
+		@media #{$xs,$sm,$md} {
+			margin-top: 0px;
+			padding: 13px 15px;
+			border-radius: 0 0 40px 40px;
+			box-shadow: 0px 8px 55px 0px rgba(16, 18, 19, 0.08);
+		}
+	}
+	&.sticky {
+		.content_box {
+			margin-top: 0;
+			border-radius: 0 0 40px 40px;
+			box-shadow: 0px 8px 55px 0px rgba(16, 18, 19, 0.08);
+			@media #{$xs,$sm,$md} {
+				padding: 13px 15px;
+			}
+		}
+	}
+}
+// Header Style 4 - End
+
+/* Template Header - End
+================================================== */

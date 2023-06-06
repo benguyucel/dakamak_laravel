@@ -1,0 +1,177 @@
+/* Carousel Style Reset - Start
+================================================== */
+.portfolio_carousel {
+	.slick-track {
+		display: flex;
+		gap: 30px;
+	}
+	.slick-list {
+		overflow: visible;
+	}
+}
+.portfolio_carousel-2 {
+	.slick-track {
+		display: flex;
+		gap: 30px;
+	}
+}
+.common_carousel_centered_2 {
+	.slick-list {
+		overflow: visible;
+	}
+	.slick-track {
+		display: flex;
+		gap: 30px;
+	}
+}
+
+// Carousel Slick Dots - Start
+.slick-dots {
+	margin: 0;
+	display: flex;
+	position: static;
+	padding-top: 50px;
+	align-items: center;
+	justify-content: center;
+	li {
+		width: auto;
+		height: auto;
+		margin: 0 2px;
+		display: inline-block;
+		&:not(:last-child) {
+		}
+		button {
+			margin: 0;
+			padding: 0;
+			width: 28px;
+			height: 28px;
+			display: block;
+			border-radius: 100%;
+			transition: $transition_fast;
+			border: 1px solid transparent;
+			&:before {
+				top: 50%;
+				left: 50%;
+				opacity: 1;
+				content: '';
+				width: 8px;
+				height: 8px;
+				color: transparent;
+				border-radius: 100%;
+				transform: scale(1.5);
+				background-color: $color_dark;
+				@include transform(translate(-50%, -50%));
+			}
+		}
+		&:hover,
+		&.slick-active {
+			button {
+				opacity: 1;
+				border-color: $color_dark;
+				&:before {
+					opacity: 1;
+					color: transparent;
+				}
+			}
+		}
+	}
+}
+
+.text-white,
+.bg_primary {
+	.slick-dots {
+		li {
+			button {
+				&:before {
+					background-color: $color_white;
+				}
+			}
+			&:hover,
+			&.slick-active {
+				button {
+					border-color: $color_white;
+				}
+			}
+		}
+	}
+}
+
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+// Carousel Slick Dots - End
+
+// Carousel Arrow - Start
+.carousel_arrow {
+	padding: 60px 0 0;
+	>li {
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+	button {
+		width: 60px;
+		height: 60px;
+		display: flex;
+		overflow: hidden;
+		position: relative;
+		color: $color_dark;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+		transition: $transition_fast;
+		background-color: rgba(15, 14, 14, 0.05);
+		&:hover {
+			color: $color_white;
+			background-color: $color_primary;
+			i {
+				animation: iconltr 0.5s forwards;
+			}
+		}
+	}
+}
+
+.bg_primary {
+	.carousel_arrow {
+		button {
+			color: $color_white;
+			background-color: rgba(255, 255, 255, 0.12);
+			&:hover {
+				color: $color_primary;
+				background-color: $color_white;
+			}
+		}
+	}
+}
+.bg_light_2 {
+	.carousel_arrow {
+		button {
+			&:hover {
+				color: $color_white;
+				background-color: $color_danger;
+			}
+		}
+	}
+}
+
+.arrow_right_left {
+	position: relative;
+	.carousel_arrow {
+		padding: 0;
+		>li {
+			top: 50%;
+			position: absolute;
+			transform: translateY(-50%);
+			&:nth-child(1) {
+				left: -120px;
+			}
+			&:nth-child(2) {
+				right: -120px;
+			}
+		}
+	}
+}
+// Carousel Arrow - End
+
+/* Carousel Style Reset - End
+================================================== */
